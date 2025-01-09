@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+</head>
+<body>
+  <header>
+    <img src="img/rave.jpg" alt="Your Photo">
+    <div class="info">
+      <h1>Your Name</h1>
+      <p>IT Student | Aspiring Software Developer</p>
+      <p>Bachelor of Science in Information Technology</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a>
+    <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <section id="about" class="fade-in-element">
+    <h2>About Me</h2>
+    <p>Hi! I’m JOhn Raven M. Arieta, a Front-End Developer and back-end Developer with a passion for creating beautiful, functional websites and eager to learn more about programming. I specialize in HTML, CSS, Laravel Framework, Angular.</p>
+  </section>
+  
+  <section id="skills" class="fade-in-element">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li><i class="fas fa-code"></i> HTML5 & CSS</li>
+      <li><i class="fab fa-react"></i> Angular</li>
+      <li><i class="fab fa-node-js"></i> Node.js & Express</li>
+      <li><i class="fas fa-database"></i> MySQL & MongoDB</li>
+      <li><i class="fas fa-git-alt"></i> Git & GitHub</li>
+      <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+      <li><i class="fas fa-network-wired"></i> Laravel</li>
+      <li><i class="fas fa-brain"></i> Problem Solving</li>
+    </ul>
+  </section>
+  
+  
+  <section id="projects" class="fade-in-element">
+    <h2>Projects</h2>
+    <div class="container">
+      <div class="projects">
+        <h3><i class="fas fa-code-branch"></i> KodiGrow a interactive learning platform</h3>
+        <img src="logo.png" alt="Project 1">
+        <p>KodiGrow is a simplifies education by streamlining exams, offering instant feedback, 
+          and centralizing study resources, benefiting both educators and students 
+          with improved access and collaboration.</p>
+        <a href="https://github.com/fads122/KodiGrow" target="_blank">View Project</a>
+      </div>
+      <div class="projects">
+        <h3><i class="fas fa-cogs"></i> Bartira</h3>
+        <img src="project2.jpg" alt="Project 2">
+        <p>Bartira is a charitable initiative that provides donations of fresh and processed food 
+          to support underprivileged communities in need.</p>
+        <a href="https://github.com/Arietaraven/Laravel_project" target="_blank">View Project</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="projects">
+        <h3><i class="fas fa-code-branch"></i>CRYPT-EMOJI</h3>
+        <img src="logo.png" alt="Project 1">
+        <p>A unique encryption and decryption system that uses emojis for secure communication. 
+          It features speech-to-text and text-to-speech capabilities for password input, 
+          making it both fun and accessible.</p>
+        <a href="https://github.com/Arietaraven/encryption-project" target="_blank">View Project</a>
+      </div>
+      <div class="projects">
+        <h3><i class="fas fa-cogs"></i> Library Mnagement System</h3>
+        <img src="project2.jpg" alt="Project 2">
+        <p>The Library Management System streamlines book borrowing and returns, making it easy for users to 
+          manage loans and for administrators to track inventory efficiently.</p>
+        <a href="https://github.com/Library-Management-System-DWCL/Advance-Database-System-LMS" target="_blank">View Project</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="projects">
+        <h3><i class="fas fa-code-branch"></i>Parking System</h3>
+        <img src="logo.png" alt="Project 1">
+        <p>A smart parking management solution designed specifically for the Divine Word College of Legazpi campus. 
+          It utilizes student IDs for secure access and tracking, ensuring efficient and organized parking for students and staff.</p>
+        <a href="https://github.com/Arietaraven/parking_system" target="_blank">View Project</a>
+      </div>
+  </section>
+  
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="social-links">
+      <a href="https://www.facebook.com/arieta.jraven?mibextid=ZbWKwL" target="_blank" class="social-link">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <a href="mailto:ravenmusaarieta@gmail.com" class="social-link">
+        <i class="fas fa-envelope"></i> Gmail
+      </a>
+      <a href="https://www.instagram.com/j.raaveenaa?igsh=MWliY21wbHBlcXJ1eA==" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://web.telegram.org/k/" target="_blank" class="social-link">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 John Raven Arieta. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript function for smooth scrolling
+    document.getElementById('scrollToContact').addEventListener('click', function() {
+      const contactSection = document.getElementById('contact');
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+<script>
+    // Intersection Observer to detect when elements come into view
+    document.addEventListener("DOMContentLoaded", function() {
+      const fadeElements = document.querySelectorAll('.fade-in-element');
+      
+      // Create an intersection observer to detect when the element enters the viewport
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Stop observing the element once it's visible
+          }
+        });
+      }, {
+        threshold: 0.5  // Trigger when 50% of the element is in view
+      });
+  
+      // Observe each fade-in element
+      fadeElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+  
+</body>
+</html>
