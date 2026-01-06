@@ -1,150 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <meta name="description"
+    content="Professional portfolio of John Raven M. Arieta - IT Student & Aspiring Software Developer">
+  <meta name="keywords" content="portfolio, web developer, software developer, IT student, John Raven Arieta">
+  <title>John Raven Arieta | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <header>
-    <img src="img/rave.jpg" alt="Your Photo">
-    <div class="info">
-      <h1>John Raven M. Arieta</h1>
-      <p>IT Student | Aspiring Software Developer</p>
-      <p>Bachelor of Science in Information Technology</p>
-    </div>
-    <section id="resume" class="fade-in-element">
-      <div class="resume-container">
-        <iframe 
-        src="https://arietaraven.github.io/Raven_Portfolio-/assets/John_Raven_Arieta_Resume.pdf"
-        width="80%" 
-        height="400px" 
-        frameborder="0">
-      </iframe>
-      <div class="download-button">
-        <a href="https://arietaraven.github.io/Raven_Portfolio-/assets/John_Raven_Arieta_Resume.pdf" download="John_Raven_Arieta_Resume.pdf">
-          <i class="fas fa-download"></i> 
-        </a>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="header-content">
+        <div class="profile-img-container">
+          <div class="profile-img-wrapper">
+            <img src="img/rave.jpg" alt="John Raven Arieta" class="profile-img">
+          </div>
+        </div>
+        <div class="header-text">
+          <h1 class="title">John Raven M. Arieta</h1>
+          <p class="subtitle">IT Student | Aspiring Full-Stack Developer</p>
+          <p class="description">Bachelor of Science in Information Technology</p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="#projects" class="btn btn-outline">View My Work</a>
+          </div>
+        </div>
       </div>
-      
-    </section>
-    
-    
+    </div>
+    <div class="header-shape">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1"
+          d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,202.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+      </svg>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about"><i class="fas fa-user"></i> About</a>
-    <a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a>
-    <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">JR</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i> Skills</a></li>
+        <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <section id="about" class="fade-in-element">
-    <h2>About Me</h2>
-    <p>Hi! I’m JOhn Raven M. Arieta, a Front-End Developer and back-end Developer with a passion for creating beautiful, functional websites and eager to learn more about programming. I specialize in HTML, CSS, Laravel Framework, Angular.</p>
-  </section>
-  
-  <section id="skills" class="fade-in-element">
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li><i class="fas fa-code"></i> HTML5 & CSS</li>
-      <li><i class="fab fa-react"></i> Angular</li>
-      <li><i class="fab fa-node-js"></i> Node.js & Express</li>
-      <li><i class="fas fa-database"></i> MySQL & MongoDB</li>
-      <li><i class="fas fa-git-alt"></i> Git & GitHub</li>
-      <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
-      <li><i class="fas fa-network-wired"></i> Laravel</li>
-      <li><i class="fas fa-brain"></i> Problem Solving</li>
-    </ul>
-  </section>
-  
-  
-  <section id="projects" class="fade-in-element">
-    <h2>Projects</h2>
+  <!-- About Section -->
+  <section id="about" class="section">
     <div class="container">
-      <div class="projects">
-        <h3><i class="fas fa-code-branch"></i> KodiGrow a interactive learning platform</h3>
-        <img src="logo.png" alt="Project 1">
-        <p>KodiGrow is a simplifies education by streamlining exams, offering instant feedback, 
-          and centralizing study resources, benefiting both educators and students 
-          with improved access and collaboration.</p>
-        <a href="https://github.com/fads122/KodiGrow" target="_blank">View Project</a>
+      <div class="section-header">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Get to know me better</p>
       </div>
-      <div class="projects">
-        <h3><i class="fas fa-cogs"></i> Bartira</h3>
-        <img src="project2.jpg" alt="Project 2">
-        <p>Bartira is a charitable initiative that provides donations of fresh and processed food 
-          to support underprivileged communities in need.</p>
-        <a href="https://github.com/Arietaraven/Laravel_project" target="_blank">View Project</a>
-      </div>
-    </div>
-    <div class="container">
-      <div class="projects">
-        <h3><i class="fas fa-code-branch"></i>CRYPT-EMOJI</h3>
-        <img src="logo.png" alt="Project 1">
-        <p>A unique encryption and decryption system that uses emojis for secure communication. 
-          It features speech-to-text and text-to-speech capabilities for password input, 
-          making it both fun and accessible.</p>
-        <a href="https://github.com/Arietaraven/encryption-project" target="_blank">View Project</a>
-      </div>
-      <div class="projects">
-        <h3><i class="fas fa-cogs"></i> Library Mnagement System</h3>
-        <img src="project2.jpg" alt="Project 2">
-        <p>The Library Management System streamlines book borrowing and returns, making it easy for users to 
-          manage loans and for administrators to track inventory efficiently.</p>
-        <a href="https://github.com/Library-Management-System-DWCL/Advance-Database-System-LMS" target="_blank">View Project</a>
-      </div>
-    </div>
-    <div class="container">
-      <div class="projects">
-        <h3><i class="fas fa-code-branch"></i>Parking System</h3>
-        <img src="logo.png" alt="Project 1">
-        <p>A smart parking management solution designed specifically for the Divine Word College of Legazpi campus. 
-          It utilizes student IDs for secure access and tracking, ensuring efficient and organized parking for students and staff.</p>
-        <a href="https://github.com/Arietaraven/parking_system" target="_blank">View Project</a>
-      </div>
-  </section>
-  
+      <div class="about-content">
+        <div class="about-img-container">
+          <img src="img/john_raven.jpg" alt="John Raven Arieta" class="about-img">
+        </div>
+        <div class="about-text">
+          <h3>I'm John Raven M. Arieta</h3>
+          <p>Hello! I'm a passionate IT student and aspiring Full-Stack Developer with a strong foundation in both
+            front-end and back-end technologies. I specialize in creating responsive, user-friendly web applications
+            using modern frameworks and best practices.</p>
+          <p>With expertise in HTML5, CSS3, JavaScript, Angular, and Laravel, I love turning complex problems into
+            simple, beautiful, and intuitive solutions. I'm constantly learning and exploring new technologies to
+            enhance my skills and create better user experiences.</p>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="social-links">
-      <a href="https://www.facebook.com/arieta.jraven?mibextid=ZbWKwL" target="_blank" class="social-link">
-        <i class="fab fa-facebook"></i> Facebook
-      </a>
-      <a href="mailto:ravenmusaarieta@gmail.com" class="social-link">
-        <i class="fas fa-envelope"></i> Gmail
-      </a>
-      <a href="https://www.instagram.com/j.raaveenaa?igsh=MWliY21wbHBlcXJ1eA==" target="_blank" class="social-link">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://web.telegram.org/k/" target="_blank" class="social-link">
-        <i class="fab fa-telegram"></i> Telegram
-      </a>
+          <div class="personal-info">
+            <div class="info-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="info-title">Name:</span>
+                <span class="info-value">John Raven M. Arieta</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="info-title">Email:</span>
+                <a href="mailto:ravenmusaarieta@gmail.com" class="info-value">ravenmusaarieta@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <span class="info-title">Phone:</span>
+                <span class="info-value">+63 951 750 6389</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="info-title">Location:</span>
+                <span class="info-value">Manila, Quezon City</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="assets/Arieta_resume.pdf" class="btn btn-outline" download>Download CV</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  
 
-  <footer>
-    <p>&copy; 2025 John Raven Arieta. All Rights Reserved.</p>
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Technologies I work with</p>
+      </div>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3 class="skill-category-title">Frontend</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 90%;" data-level="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 85%;" data-level="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 80%;" data-level="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-angular"></i>
+                <span>Angular</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 75%;" data-level="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-category-title">Backend</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 80%;" data-level="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-laravel"></i>
+                <span>Laravel</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 75%;" data-level="75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 70%;" data-level="70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fas fa-server"></i>
+                <span>Express</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 70%;" data-level="70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-category-title">Database</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 80%;" data-level="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fas fa-database"></i>
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 70%;" data-level="70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 85%;" data-level="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fas fa-database"></i>
+                <span>Supabase</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="--skill-level: 75%;" data-level="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">A showcase of my recent work</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/projects/kodigrow.jpg" alt="KodiGrow Platform">
+            <div class="project-links">
+              <a href="https://github.com/fads122/KodiGrow" target="_blank" class="project-link" title="View Code">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>KodiGrow</h3>
+            <p>An interactive learning platform that simplifies education by streamlining exams, offering instant
+              feedback, and centralizing study resources.</p>
+            <div class="project-tech">
+              <span>Laravel</span>
+              <span>MySQL</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/projects/bartira.jpg" alt="Bartira Donation Platform">
+            <div class="project-links">
+              <a href="https://github.com/Arietaraven/Laravel_project" target="_blank" class="project-link"
+                title="View Code">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Bartira</h3>
+            <p>A charitable initiative platform that facilitates donations of fresh and processed food to support
+              underprivileged communities.</p>
+            <div class="project-tech">
+              <span>Laravel</span>
+              <span>MySQL</span>
+              <span>jQuery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/projects/crypt-emoji.jpg" alt="CRYPT-EMOJI">
+            <div class="project-links">
+              <a href="https://github.com/Arietaraven/encryption-project" target="_blank" class="project-link"
+                title="View Code">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>CRYPT-EMOJI</h3>
+            <p>An innovative encryption system using emojis with speech-to-text and text-to-speech capabilities for
+              secure communication.</p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>Web Speech API</span>
+              <span>HTML5/CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/projects/library.jpg" alt="Library Management System">
+            <div class="project-links">
+              <a href="https://github.com/Library-Management-System-DWCL/Advance-Database-System-LMS" target="_blank"
+                class="project-link" title="View Code">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Library Management System</h3>
+            <p>A comprehensive system for managing library operations including book borrowing, returns, and inventory
+              tracking.</p>
+            <div class="project-tech">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="img/projects/parking.jpg" alt="Parking Management System">
+            <div class="project-links">
+              <a href="https://github.com/Arietaraven/parking_system" target="_blank" class="project-link"
+                title="View Code">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Smart Parking System</h3>
+            <p>A campus parking management solution using student IDs for secure access and efficient parking space
+              management.</p>
+            <div class="project-tech">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>RFID Integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">I'd love to hear from you</p>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>Feel free to reach out for collaborations or just a friendly hello. I'll get back to you as soon as
+            possible!</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email Me</h4>
+                <a href="mailto:ravenmusaarieta@gmail.com">ravenmusaarieta@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>Manila, Quezon City</p>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <h4>Follow Me</h4>
+              <div class="social-links">
+                <a href="https://github.com/Arietaraven" target="_blank" class="social-link" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-link" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/arieta.jraven" target="_blank" class="social-link"
+                  aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/j.raaveenaa" target="_blank" class="social-link"
+                  aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjgkqzkr" method="POST">
+          <div class="form-group">
+            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="_subject" class="form-control" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-control" placeholder="Your Message" required></textarea>
+          </div>
+          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div id="form-status" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span>JR</span>
+          <p>John Raven Arieta</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> John Raven Arieta. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
 
   <script>
     // JavaScript function for smooth scrolling
-    document.getElementById('scrollToContact').addEventListener('click', function() {
+    document.getElementById('scrollToContact').addEventListener('click', function () {
       const contactSection = document.getElementById('contact');
       contactSection.scrollIntoView({ behavior: 'smooth' });
     });
   </script>
 
-<script>
+  <script>
     // Intersection Observer to detect when elements come into view
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const fadeElements = document.querySelectorAll('.fade-in-element');
-      
+
       // Create an intersection observer to detect when the element enters the viewport
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -156,13 +541,14 @@
       }, {
         threshold: 0.5  // Trigger when 50% of the element is in view
       });
-  
+
       // Observe each fade-in element
       fadeElements.forEach(element => {
         observer.observe(element);
       });
     });
   </script>
-  
+
 </body>
+
 </html>
