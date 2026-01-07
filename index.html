@@ -31,21 +31,55 @@
   <header class="header">
     <div class="container header-container">
       <div class="header-content">
+        <!-- Animated profile image with glow effect -->
         <div class="profile-img-container">
           <div class="profile-img-wrapper">
-            <img src="img/rave.jpg" alt="John Raven Arieta" class="profile-img">
+            <div class="profile-glow"></div>
+            <img src="img/john_raven.jpg" alt="John Raven Arieta" class="profile-img">
           </div>
         </div>
+
+        <!-- Header text with animated elements -->
         <div class="header-text">
-          <h1 class="title">John Raven M. Arieta</h1>
-          <p class="subtitle">IT Student | Aspiring Full-Stack Developer</p>
-          <p class="description">Bachelor of Science in Information Technology</p>
+          <div class="greeting-text">
+            <span class="wave">👋</span> Hello, I'm
+          </div>
+          <h1 class="title typing-animation">John Raven M. Arieta</h1>
+          <div class="subtitle-wrapper">
+            <p class="subtitle">
+              <span class="typing-text" data-texts='["IT Student", "Web Developer", "Tech Enthusiast"]'></span>
+            </p>
+          </div>
+          <p class="description fade-in">Bachelor of Science in Information Technology</p>
           <div class="cta-buttons">
-            <a href="#contact" class="btn btn-primary">Hire Me</a>
-            <a href="#projects" class="btn btn-outline">View My Work</a>
+            <a href="#contact" class="btn btn-primary pulse-animation">
+              <span>Hire Me</span>
+              <i class="fas fa-paper-plane"></i>
+            </a>
+            <a href="#projects" class="btn btn-outline slide-hover">
+              <span>View My Work</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="header-social-links">
+            <a href="https://github.com/Arietaraven" target="_blank" class="social-icon" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/john-raven-arieta-6800a63a5/" target="_blank" class="social-icon"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:ravenmusaarieta@gmail.com" class="social-icon" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
       </div>
+    </div>
+    <div class="header-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
     </div>
     <div class="header-shape">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -58,20 +92,29 @@
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#" class="logo">JR</a>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <i class="fas fa-code"></i>
+        <span>JohnRaven</span>
+      </a>
       <button class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i> Skills</a></li>
-        <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
-        <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="#about" class="nav-link" data-text="About"><i class="fas fa-user"></i> <span>About</span></a></li>
+        <li><a href="#skills" class="nav-link" data-text="Skills"><i class="fas fa-laptop-code"></i>
+            <span>Skills</span></a></li>
+        <li><a href="#projects" class="nav-link" data-text="Projects"><i class="fas fa-project-diagram"></i>
+            <span>Projects</span></a></li>
+        <li><a href="#gallery" class="nav-link" data-text="Gallery"><i class="fas fa-images"></i>
+            <span>Gallery</span></a></li>
+        <li><a href="#contact" class="nav-link btn-contact" data-text="Contact"><i class="fas fa-paper-plane"></i>
+            <span>Contact</span></a></li>
       </ul>
     </div>
+    <div class="nav-overlay"></div>
   </nav>
 
   <!-- About Section -->
@@ -278,138 +321,165 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Project 0 -->
-        <div class="project-card">
-          <div class="project-img">
-            <img src="img/projects/kodigrow.jpg" alt="KodiGrow Platform">
-            <div class="project-links">
-              <a href="https://github.com/fads122/KodiGrow" target="_blank" class="project-link" title="View Code">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <div class="project-content">
-            <h3> Inventory Management System</h3>
-            <p>Inventory management system that centralizes stock tracking, order fulfillment, and supplier coordination. 
-              It syncs real-time inventory levels, flags low-stock items, and automates purchase orders to reduce stockouts while providing analytics dashboards for forecasting and decision-making..</p>
-            <div class="project-tech">
-              <span>Angular</span>
-              <span>Supabase</span>
-              <span>node.js</span>
-              <span>express.js</span>
-            </div>
-          </div>
-        </div>
         <!-- Project 1 -->
         <div class="project-card">
-          <div class="project-img">
-            <img src="img/projects/kodigrow.jpg" alt="KodiGrow Platform">
-            <div class="project-links">
-              <a href="https://github.com/fads122/KodiGrow" target="_blank" class="project-link" title="View Code">
-                <i class="fab fa-github"></i>
-              </a>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-boxes"></i>
             </div>
+            <h3>Inventory Management System</h3>
           </div>
           <div class="project-content">
-            <h3>KodiGrow</h3>
-            <p>An interactive learning platform that simplifies education by streamlining exams, offering instant
-              feedback, and centralizing study resources.</p>
-            <div class="project-tech">
-              <span>Laravel</span>
-              <span>MySQL</span>
-              <span>Bootstrap</span>
+            <p>Inventory management system that centralizes stock tracking, order fulfillment, and supplier
+              coordination. It syncs real-time inventory levels, flags low-stock items, and automates purchase orders to
+              reduce stockouts while providing analytics dashboards for forecasting and decision-making.</p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span>Angular</span>
+                <span>Supabase</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/fads122/KodiGrow" target="_blank" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Project 2 -->
         <div class="project-card">
-          <div class="project-img">
-            <img src="img/projects/bartira.jpg" alt="Bartira Donation Platform">
-            <div class="project-links">
-              <a href="https://github.com/Arietaraven/Laravel_project" target="_blank" class="project-link"
-                title="View Code">
-                <i class="fab fa-github"></i>
-              </a>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-graduation-cap"></i>
             </div>
+            <h3>KodiGrow</h3>
           </div>
           <div class="project-content">
-            <h3>Bartira</h3>
-            <p>A charitable initiative platform that facilitates donations of fresh and processed food to support
-              underprivileged communities.</p>
-            <div class="project-tech">
-              <span>Laravel</span>
-              <span>MySQL</span>
-              <span>jQuery</span>
+            <p>An interactive learning platform that simplifies education by streamlining exams, offering instant
+              feedback, and centralizing study resources.</p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span>Angular</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+                <span>WSL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/fads122/KodiGrow" target="_blank" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Project 3 -->
         <div class="project-card">
-          <div class="project-img">
-            <img src="img/projects/crypt-emoji.jpg" alt="CRYPT-EMOJI">
-            <div class="project-links">
-              <a href="https://github.com/Arietaraven/encryption-project" target="_blank" class="project-link"
-                title="View Code">
-                <i class="fab fa-github"></i>
-              </a>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-hands-helping"></i>
             </div>
+            <h3>Bartira</h3>
           </div>
           <div class="project-content">
-            <h3>CRYPT-EMOJI</h3>
-            <p>An innovative encryption system using emojis with speech-to-text and text-to-speech capabilities for
-              secure communication.</p>
-            <div class="project-tech">
-              <span>JavaScript</span>
-              <span>Web Speech API</span>
-              <span>HTML5/CSS3</span>
+            <p>A charitable initiative platform that facilitates donations of fresh and processed food to support
+              underprivileged communities.</p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>jQuery</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Arietaraven/Laravel_project" target="_blank" class="project-link"
+                  title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Project 4 -->
         <div class="project-card">
-          <div class="project-img">
-            <img src="img/projects/library.jpg" alt="Library Management System">
-            <div class="project-links">
-              <a href="https://github.com/Library-Management-System-DWCL/Advance-Database-System-LMS" target="_blank"
-                class="project-link" title="View Code">
-                <i class="fab fa-github"></i>
-              </a>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-lock"></i>
             </div>
+            <h3>CRYPT-EMOJI</h3>
           </div>
           <div class="project-content">
-            <h3>Library Management System</h3>
-            <p>A comprehensive system for managing library operations including book borrowing, returns, and inventory
-              tracking.</p>
-            <div class="project-tech">
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>Bootstrap</span>
+            <p>An innovative encryption system using emojis with speech-to-text and text-to-speech capabilities for
+              secure communication.</p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>Web Speech API</span>
+                <span>HTML5/CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Arietaraven/encryption-project" target="_blank" class="project-link"
+                  title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Project 5 -->
         <div class="project-card">
-          <div class="project-img">
-            <img src="img/projects/parking.jpg" alt="Parking Management System">
-            <div class="project-links">
-              <a href="https://github.com/Arietaraven/parking_system" target="_blank" class="project-link"
-                title="View Code">
-                <i class="fab fa-github"></i>
-              </a>
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-book"></i>
             </div>
+            <h3>Library Management</h3>
           </div>
           <div class="project-content">
-            <h3>Smart Parking System</h3>
+            <p>A comprehensive system for managing library operations including book borrowing, returns, and inventory
+              tracking.</p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Library-Management-System-DWCL/Advance-Database-System-LMS" target="_blank"
+                  class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-parking"></i>
+            </div>
+            <h3>Smart Parking</h3>
+          </div>
+          <div class="project-content">
             <p>A campus parking management solution using student IDs for secure access and efficient parking space
               management.</p>
-            <div class="project-tech">
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>RFID Integration</span>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>RFID Integration</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Arietaraven/parking_system" target="_blank" class="project-link"
+                  title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -497,6 +567,89 @@
       </div>
     </div>
   </section>
+
+  <!-- Image Gallery Carousel -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My <span>Gallery</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Hover over images to view full size</p>
+      </div>
+      <div class="gallery-carousel">
+        <div class="gallery-track">
+          <div class="gallery-slide" data-fullsize="img/IMG_20240414_185103_686.jpg">
+            <img src="img/IMG_20240414_185103_686.jpg" alt="Gallery Image 1" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-slide" data-fullsize="img/IMG_20240415_093612_351.jpg">
+            <img src="img/IMG_20240415_093612_351.jpg" alt="Gallery Image 2" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-slide" data-fullsize="img/IMG_20240426_085429_314.jpg">
+            <img src="img/IMG_20240426_085429_314.jpg" alt="Gallery Image 3" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-slide" data-fullsize="img/IMG_20240426_095327_936.jpg">
+            <img src="img/IMG_20240426_095327_936.jpg" alt="Gallery Image 4" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-slide" data-fullsize="img/IMG_20240426_164037_432.jpg">
+            <img src="img/IMG_20240426_164037_432.jpg" alt="Gallery Image 5" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <!-- Duplicate slides for seamless looping -->
+          <div class="gallery-slide" data-fullsize="img/john_raven.jpg">
+            <img src="img/john_raven.jpg" alt="Gallery Image 6" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-slide" data-fullsize="img/IMG_20240426_085429_314.jpg">
+            <img src="img/IMG_20240426_085429_314.jpg" alt="Gallery Image 7" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-slide" data-fullsize="img/IMG_20240415_093612_351.jpg">
+            <img src="img/IMG_20240415_093612_351.jpg" alt="Gallery Image 8" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-slide" data-fullsize="img/IMG_20240426_095327_936.jpg">
+            <img src="img/IMG_20240426_095327_936.jpg" alt="Gallery Image 9" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-slide" data-fullsize="img/IMG_20240426_164037_432.jpg">
+            <img src="img/IMG_20240426_164037_432.jpg" alt="Gallery Image 10" loading="lazy">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="imageLightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightboxImage">
+    <div class="lightbox-caption"></div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">

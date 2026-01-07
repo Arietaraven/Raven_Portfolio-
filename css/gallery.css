@@ -1,0 +1,248 @@
+/* Gallery Section */
+.gallery-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-section::before,
+.gallery-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gallery-section::before {
+  top: 0;
+  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+}
+
+.gallery-section::after {
+  bottom: 0;
+  background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+}
+
+/* Gallery Carousel */
+.gallery-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  padding: 1rem 0;
+}
+
+.gallery-slide {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  background: #fff;
+  cursor: pointer;
+}
+
+.gallery-slide:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-overlay i {
+  color: white;
+  font-size: 2.5rem;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.gallery-slide:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-slide:hover .gallery-overlay i {
+  transform: scale(1);
+}
+
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.show {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  animation: lightboxFadeIn 0.3s ease-out;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-lightbox:hover {
+  color: #ff6b6b;
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-300px * 5 - 2rem * 4));
+  }
+}
+
+/* Pause animation on hover */
+.gallery-carousel:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .gallery-slide {
+    width: 250px;
+    height: 180px;
+  }
+
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-250px * 5 - 2rem * 4));
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 3rem 0;
+  }
+
+  .gallery-slide {
+    width: 220px;
+    height: 160px;
+  }
+
+  .gallery-track {
+    gap: 1.5rem;
+  }
+
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-220px * 5 - 1.5rem * 4));
+    }
+  }
+
+  .lightbox-content {
+    max-width: 95%;
+    max-height: 80vh;
+  }
+
+  .close-lightbox {
+    font-size: 2.5rem;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+/* Add gradient overlay on slides */
+.gallery-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.5) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-slide:hover::after {
+  opacity: 1;
+}

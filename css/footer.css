@@ -28,7 +28,7 @@ footer {
   color: #fff;
   display: inline-block;
   background: linear-gradient(90deg, #4361ee, #4cc9f0);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
